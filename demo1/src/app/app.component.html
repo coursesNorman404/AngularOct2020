@@ -1,49 +1,9 @@
-<!-- Hola mundo
+<!-- <app-product></app-product> -->
 
-<div (click)="aletaPersonal('Norman')">
-  {{ name }}
+<div *ngFor="let product of products">
+  <app-product (clickAddToCart)="handleProductAddToCart($event)" [product]="product"></app-product>
+  <!-- <h3>{{product.title}}</h3>
+  <p>{{product.price}}</p>
+  <img [src]="product.image">
+  <p>{{product.description}}</p> -->
 </div>
-
-
- <img [src]="items.imagenUrl">
-<img src="items.imagenUrl"> 
-
-
-<button (click)="name = 'Torres'">Entrar</button>
-
-<button (click)="aletaPersonal('Norman')">Entrar 2</button>
-
-<input type="text" [(ngModel)]="name">
-
-<div *ngIf="name == 'Antonio'">Hola antonio tu eres un usuario VIP</div> -->
-
-
-<!-- <input type="text" [(ngModel)]="input">
-<button (click)="addItem()">Agregar</button>
-
-<ul>
-  <li *ngFor="let item of array; index as i">
-    {{item}} - {{i}}
-    <button (click)="deleteItem(i)">Delete</button>
-  </li>
-</ul> -->
-
-<input type="text" [(ngModel)]="name">
-
-<!-- <div *ngIf="name == 'Antonio'">Hola antonio tu eres un usuario VIP</div>
-<div *ngIf="name == 'Norman'">Tu que haces aqui</div>
-<div *ngIf="name == 'Pepe'">No eres deceado</div> -->
-
-<div [ngSwitch]="name">
-  <p *ngSwitchCase="'Antonio'">Hola antonio tu eres un usuario VIP</p>
-  <p *ngSwitchCase="'Norman'">Tu que haces aqui</p>
-  <p *ngSwitchCase="'Pepe'">No eres deceado</p>
-  <p *ngSwitchDefault>Quien eres??</p>
-</div>
-
-
-<!-- <div *ngFor='let product of products'>
-  {{product.title}} <button (click)="miFuncion(product.price)">Ver precio</button>
-</div> -->
-
-
