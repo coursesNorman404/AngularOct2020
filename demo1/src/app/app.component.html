@@ -1,9 +1,11 @@
-<!-- <app-product></app-product> -->
 
-<div *ngFor="let product of products">
-  <app-product (clickAddToCart)="handleProductAddToCart($event)" [product]="product"></app-product>
-  <!-- <h3>{{product.title}}</h3>
-  <p>{{product.price}}</p>
-  <img [src]="product.image">
-  <p>{{product.description}}</p> -->
+<h3>La hora es {{today | date:'HH:mm' }}</h3>
+
+<input type="text" [(ngModel)]="power">
+{{power | exponential}}
+
+<div class="container">
+  <div class="row">
+    <app-product *ngFor="let product of products"  class="col-4" (clickAddToCart)="handleProductAddToCart($event)" [product]="product"></app-product>
+  </div>
 </div>

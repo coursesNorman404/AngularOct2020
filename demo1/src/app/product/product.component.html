@@ -1,5 +1,11 @@
-<h3>{{product.title}}</h3>
+<h3 appHighlight>{{product.title | uppercase}}</h3>
 <button (click)="addCart()">Agregar al carrito</button>
-<p>{{product.price}}</p>
+<!-- Automaticamente lo toma como si la monera estuviera en dolares pero es muy flexible
+para poder tomar la moneda que tu quieras y los puntos decimales que se quieran agregar -->
+<p>{{product.price | currency }}</p>
 <img [src]="product.image">
-<p>{{product.description}}</p>
+<p>{{ product.description | slice:0:20 }}</p> 
+<!-- 
+  Esto es un error ya que cortaria desde los 20 y termina ocultando el texto slice es un rango
+  tomar encuenta que cunta los espacios
+  <p>{{ product.description | slice:20 }}</p> -->

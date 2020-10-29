@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  today = new Date()
+  power = 10
   products = [
     {
       id: 1,
