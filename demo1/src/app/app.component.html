@@ -1,11 +1,6 @@
+<!-- 
+  La forma para mostrar contenido dependiendo de las rutas en Angular
+  es usando una etiqueta de angular llamada router-outlet
+-->
+<router-outlet></router-outlet>
 
-<h3>La hora es {{today | date:'HH:mm' }}</h3>
-
-<input type="text" [(ngModel)]="power">
-{{power | exponential}}
-
-<div class="container">
-  <div class="row">
-    <app-product *ngFor="let product of products"  class="col-4" (clickAddToCart)="handleProductAddToCart($event)" [product]="product"></app-product>
-  </div>
-</div>

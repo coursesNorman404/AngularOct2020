@@ -7,13 +7,27 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ExponentialPipe } from './pipe/exponential.pipe';
 import { HighlightDirective } from './directive/highlight.directive';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
+import { Code404Component } from './code404/code404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent,
+    ProductsComponent,
+    ContactComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent,
+    Code404Component
   ],
   imports: [
     BrowserModule,

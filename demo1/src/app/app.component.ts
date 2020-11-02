@@ -6,32 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  today = new Date()
-  power = 10
-  products = [
-    {
-      id: 1,
-      image: 'assets/images/camiseta.png',
-      title: 'Camisa',
-      price: 80,
-      description: 'bla bla bla bla'
-    },
-    {
-      id: 2,
-      image: 'assets/images/hoodie.jpg',
-      title: 'Hoodie',
-      price: 120,
-      description: 'bla bla bla bla'
-    },
-    {
-      id: 3,
-      image: 'assets/images/mug.png',
-      title: 'Taza',
-      price: 90,
-      description: 'bla bla bla bla'
-    }
-  ]
-  handleProductAddToCart(id) {
-    console.log(id)
-  }
+  constructor() {}  
 }
