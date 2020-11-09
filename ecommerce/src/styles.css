@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.center {
+  text-align: center !important;
+}
+.marto15 {
+  margin-top: 15px;
+}
+.marbo15 {
+  margin-bottom: 15px;
+}
+.marbo5 {
+  margin-bottom: 5px;
+}
+.displo {
+  display: block !important;
+}
+.generalContainer {
+  margin-top: 54px;
+}
+.pato45 {
+  padding-top: 45px;
+}
