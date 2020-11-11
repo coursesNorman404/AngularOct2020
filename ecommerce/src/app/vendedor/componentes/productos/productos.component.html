@@ -1,0 +1,9 @@
+<div>
+  <h3>{{product.nombre}}</h3>
+  <p>{{product.descripcion}}</p>
+  <button routerLink="product/{{product.idproducto}}">Detalles</button>
+  <div class="row">
+    <div class="col-6">{{product.precio | currency}}</div>
+    <div class="col-6">{{product.stock}}</div>
+  </div>
+</div>

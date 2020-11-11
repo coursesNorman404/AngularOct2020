@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
       if (this.perfil === 'ADMIN') {
         this.router.navigateByUrl('admin')
       } else {
+        this.router.navigateByUrl('vendedor')
         //Redirecion
       }
     }
@@ -68,7 +69,7 @@ export class LoginComponent implements OnInit {
         if (res.perfil === 'ADMIN') {
           this.router.navigateByUrl('admin')
         } else {
-          this.router.navigateByUrl('')
+          this.router.navigateByUrl('vendedor')
         }
         // console.log('Entro 2')
       })

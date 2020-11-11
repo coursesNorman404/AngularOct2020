@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="filter">
+<button (click)="filterProduct()">Filtrar</button>
+<button (click)="filterDelete()">Delete</button>
+<div class="row">
+  <app-productos class="col-3" *ngFor="let product of productos" [product]="product"></app-productos>
+</div>
+

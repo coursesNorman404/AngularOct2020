@@ -1,1 +1,27 @@
-<p>home-admin works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Ventas totales en $</th>
+      <th scope="col">Cantidad de productos vendidos</th>
+      <th scope="col">Cantidad actual de existencias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let invetario of invetarios" [ngClass]="{'table-warning': invetario.stock <= 15, 'table-danger': invetario.stock > 100   }"  >
+      <th scope="row">{{invetario.id}}</th>
+      <td>{{invetario.nombre}}</td>
+      <td>{{invetario.ventastotales | currency}}</td>
+      <td>{{invetario.cantidad}}</td>
+      <td>{{invetario.stock}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{total.id}}</th>
+      <td>{{total.nombre}}</td>
+      <td>{{total.ventastotales | currency}}</td>
+      <td>{{total.cantidad}}</td>
+      <td>{{total.stock}}</td>
+    </tr>
+  </tbody>
+</table>
