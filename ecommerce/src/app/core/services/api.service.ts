@@ -26,4 +26,10 @@ export class ApiService {
   getInventario() {
     return this.http.get(`${this.API}/compra/inventario`, {headers: new HttpHeaders().set('Authorization', `Bearer ${this.token}`)}).toPromise()
   }
+  getClientes() {
+    return this.http.get(`${this.API}/cliente`, {headers: new HttpHeaders().set('Authorization', `Bearer ${this.token}`)}).toPromise()
+  }
+  setCompra(compra: any) {
+    return this.http.post(`${this.API}/compra`, compra, {headers: new HttpHeaders().set('Authorization', `Bearer ${this.token}`)}).toPromise()
+  }
 }

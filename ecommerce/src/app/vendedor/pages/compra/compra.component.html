@@ -1,0 +1,36 @@
+<button routerLink="/vendedor" class="btn btn-primary">Productos</button>
+<br>
+<br>
+<div class="form-group">
+  <label for="clientesSelect">Clientes</label>
+  <select class="form-control" id="clientesSelect" [(ngModel)]="cliente" >
+    <option *ngFor="let c of clientes" [value]="c.idcliente">{{c.nombre}}</option>
+  </select>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio de venta</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of (carrito); let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{producto.producto.nombre}}</td>
+      <td>{{producto.producto.precio | currency}}</td>
+      <td>{{producto.cantidad}}</td>
+      <td>{{producto.costo | currency}}</td>
+    </tr>
+    <tr class="bg-success">
+      <th scope="row" colspan="3">Total</th>
+      <td>{{(totalCarrito).count}}</td>
+      <td>{{(totalCarrito).total | currency}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" (click)="newCompra()">Comprar</button>

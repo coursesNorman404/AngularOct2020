@@ -21,19 +21,19 @@ export class ProductDetaComponent implements OnInit {
     stock: 0
   }
   id: number
-  constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService, private carrito: CarritoService ) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private apiService: ApiService,
+    private carrito: CarritoService ) { }
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params.id
     this.apiService.getProductById(this.id).then((product: Producto) => {
       this.product = product
-      this.carrito.addCarrito(this.product)
     })
   }
-  entro() {
-    this.carrito.getCarrito().subscribe(res => {
-      console.log(res)
-    })
+  addCarritoDeCompras() {
+    this.carrito.addCarrito(this.product)
   }
 
 }

@@ -1,0 +1,4 @@
+<button routerLink="/vendedor/compra" type="button" class="btn btn-primary">
+  <i class="fas fa-shopping-basket"></i> Carrito <span class="badge badge-light">{{(countProduct | async).count}}</span>
+  <span class="sr-only">unread messages</span>
+</button>
